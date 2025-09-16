@@ -1,3 +1,6 @@
+server:
+  port: 8098
+
 spring:
   application:
     name: ahcc-cursos
