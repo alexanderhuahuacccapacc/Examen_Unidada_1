@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: ahcc-cursos
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/ahcc-cursosdb
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /doc/swagger-ui.html
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8095/eureka
+  instance:
+    hostname: localhost
