@@ -6,8 +6,3 @@ spring:
   config:
     import: optional:configserver:http://root:1234567@localhost:7070
 
-
-  security:
-    user:
-      name: root
-      password: 1234567
