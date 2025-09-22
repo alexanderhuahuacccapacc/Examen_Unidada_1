@@ -4,30 +4,28 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://localhost:8761/eureka  # ⚠️ SIN credenciales
     fetch-registry: true
     register-with-eureka: true
   instance:
-        hostname: localhost
-        prefer-ip-address: true
+    hostname: localhost
+    prefer-ip-address: true
 
 spring:
   application:
     name: ms-gateway-server
   cloud:
     gateway:
-      server:
-        webflux:
-          discovery:
-            locator:
-              enabled: true
-              lower-case-service-id: true
-          routes:
-            - id: ahcc-cursos
-              uri: lb://ahcc-cursos
-              predicates:
-                - Path=/Cursos/**
-            - id: sm-marca
-              uri: lb://sm-marca
-              predicates:
-                - Path=/marca/
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: ahcc-cursos
+          uri: lb://ahcc-cursos
+          predicates:
+            - Path=/Cursos/**
+        - id: sm-marca
+          uri: lb://sm-marca
+          predicates:
+            - Path=/marca/**
