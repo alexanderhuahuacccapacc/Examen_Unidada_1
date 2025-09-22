@@ -4,14 +4,12 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://root:1234567localhost:8761/eureka
+      defaultZone: http://root:1234567@localhost:8761/eureka
     fetch-registry: true
     register-with-eureka: true
   instance:
         hostname: localhost
         prefer-ip-address: true
-
-
 
 spring:
   application:
@@ -33,7 +31,7 @@ spring:
               uri: lb://sm-marca
               predicates:
                 - Path=/marca/
-                  
+
 eureka-client:
   service-url:
     defaultZone: http://root:1234567@localhost:8761/eureka
