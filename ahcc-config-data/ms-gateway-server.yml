@@ -4,12 +4,9 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka  # ⚠️ SIN credenciales
-    fetch-registry: true
-    register-with-eureka: true
-  instance:
+      defaultZone: http://localhost:8761/eureka  
     hostname: localhost
-    prefer-ip-address: true
+
 
 spring:
   application:
