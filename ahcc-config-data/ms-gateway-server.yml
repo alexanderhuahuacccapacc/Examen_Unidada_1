@@ -24,10 +24,10 @@ spring:
               enabled: true
               lower-case-service-id: true
           routes:
-            - id: ms-catalogo
-              uri: lb://ms-catalogo
+            - id: ahcc-cursos
+              uri: lb://ahcc-cursos
               predicates:
-                - Path=/categoria/**
+                - Path=/Cursos/**
             - id: sm-marca
               uri: lb://sm-marca
               predicates:
