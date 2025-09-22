@@ -13,8 +13,6 @@ eureka:
 spring:
   application:
     name: ms-gateway-server
-
-
   cloud:
     gateway:
       server:
