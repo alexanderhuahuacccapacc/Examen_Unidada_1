@@ -3,8 +3,8 @@ server:
 
 eureka:
   client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka  
+    service-url:
+      defaultZone: http://localhost:8761/eureka
     hostname: localhost
 
 
@@ -22,7 +22,3 @@ spring:
           uri: lb://ahcc-cursos
           predicates:
             - Path=/Cursos/**
-        - id: sm-marca
-          uri: lb://sm-marca
-          predicates:
-            - Path=/marca/**
