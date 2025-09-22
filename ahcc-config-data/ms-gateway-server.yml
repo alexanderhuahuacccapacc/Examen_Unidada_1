@@ -13,12 +13,14 @@ spring:
     name: ms-gateway-server
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: true
-      routes:
-        - id: ahcc-cursos
-          uri: lb://ahcc-cursos
-          predicates:
-            - Path=/Cursos/**
+      server:
+        webflux:
+          discovery:
+            locator:
+              enabled: true
+              lower-case-service-id: true
+          routes:
+            - id: ahcc-cursos
+              uri: lb://ahcc-cursos
+              predicates:
+                - Path=/Cursos/**
